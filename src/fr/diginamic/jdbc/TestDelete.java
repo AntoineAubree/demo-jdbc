@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class TestUpdate {
+public class TestDelete {
 
 	public static void main(String[] args) {
 
@@ -24,7 +24,7 @@ public class TestUpdate {
 			Connection connetion = DriverManager.getConnection(url, user, password);
 			// étape 3 : création du Statement
 			Statement statement = connetion.createStatement();
-			statement.executeUpdate("UPDATE fournisseur SET nom = 'Vive la Peinture' WHERE nom = 'La Maison des Peintures'");
+			statement.executeUpdate("DELETE FROM fournisseur WHERE id = 1");
 			statement.close();
 			connetion.close();
 			System.out.println(connetion.isClosed());

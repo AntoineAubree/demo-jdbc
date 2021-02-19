@@ -25,6 +25,7 @@ public class TestInsersion {
 			// étape 3 : création du Statement
 			Statement statement = connetion.createStatement();
 			statement.executeUpdate("INSERT INTO fournisseur (nom) VALUES ('La Maison des Peintures')");
+			statement.close();
 			connetion.close();
 			System.out.println(connetion.isClosed());
 		} catch (SQLException e) {
