@@ -1,11 +1,12 @@
-package fr.diginalic.props;
+package fr.diginalic.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class TestConnection {
+public class TestInsersion {
 
 	public static void main(String[] args) {
 
@@ -21,6 +22,9 @@ public class TestConnection {
 			// étape 2 : je demande au DriverManager de ma fournir une connexion à une base
 			// MySQL
 			Connection connetion = DriverManager.getConnection(url, user, password);
+			// étape 3 : création du Statement
+			Statement statement = connetion.createStatement();
+			statement.executeUpdate("INSERT INTO fournisseur (nom) VALUES ('La Maison des Peintures')");
 			connetion.close();
 			System.out.println(connetion.isClosed());
 		} catch (SQLException e) {
@@ -28,6 +32,7 @@ public class TestConnection {
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
+		
 	}
 
 }
