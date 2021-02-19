@@ -1,4 +1,4 @@
-package fr.diginalic.jdbc;
+package fr.diginamic.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

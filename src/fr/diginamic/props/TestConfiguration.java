@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.diginalic.props;
+package fr.diginamic.props;
 
 import java.util.Enumeration;
 import java.util.ResourceBundle;

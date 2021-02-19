@@ -1,12 +1,11 @@
-package fr.diginalic.jdbc;
+package fr.diginamic.props;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class TestUpdate {
+public class TestConnection {
 
 	public static void main(String[] args) {
 
@@ -22,9 +21,6 @@ public class TestUpdate {
 			// étape 2 : je demande au DriverManager de ma fournir une connexion à une base
 			// MySQL
 			Connection connetion = DriverManager.getConnection(url, user, password);
-			// étape 3 : création du Statement
-			Statement statement = connetion.createStatement();
-			statement.executeUpdate("UPDATE fournisseur SET nom = 'Vive la Peinture' WHERE nom = 'La Maison des Peintures'");
 			connetion.close();
 			System.out.println(connetion.isClosed());
 		} catch (SQLException e) {
@@ -32,7 +28,6 @@ public class TestUpdate {
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 
 }
