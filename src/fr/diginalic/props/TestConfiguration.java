@@ -16,7 +16,7 @@ public class TestConfiguration {
 	 */
 	public static void main(String[] args) {
 		ResourceBundle monFichierConf = ResourceBundle.getBundle("database");
-		String prenom = monFichierConf.getString("database.prenom");
+		String prenom = monFichierConf.getString("prenom");
 		System.out.println(prenom);
 	}
 
