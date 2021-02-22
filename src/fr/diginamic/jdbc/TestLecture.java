@@ -38,8 +38,8 @@ public class TestLecture {
 					curseur.getString("adresse")
 				));
 			}
-			statement.close();
 			curseur.close();
+			statement.close();
 			connetion.close();
 			System.out.println(connetion.isClosed());
 		} catch (SQLException e) {
